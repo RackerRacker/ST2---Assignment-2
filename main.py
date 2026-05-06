@@ -15,6 +15,10 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from utils import *
 from phase1.data_structures import data_structures_module
+from phase2.graphs import graphs_module
+from phase2.sorting import sorting_module
+from phase2.heap_module import heap_module 
+
 
 
 def main_menu(screen, clock):
@@ -29,7 +33,10 @@ def main_menu(screen, clock):
 
     # menu options and their module functions
     entries = [
-        ("Phase 1 - Data Structures", data_structures_module, GREEN,   GREEN_HOVER)
+        ("Phase 1 - Data Structures", data_structures_module, GREEN,   GREEN_HOVER),
+        ("Phase 2 - Graphs", graphs_module, BLUE,   BTN_HOVER),
+        ("Phase 2 - Sorting", sorting_module, BLUE, BTN_HOVER),
+        ("Phase 2 - Heap", heap_module, ORANGE,   (255, 200, 100))
     ]
 
     # centered button rectangles
