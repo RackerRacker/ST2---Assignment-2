@@ -1,5 +1,5 @@
 """
-main.py - DSA Explorer and Visualiser
+main.py - ST2 DSA Explorer and Visualiser
 Entry point. Shows the main menu and launches whichever module the user picks.
 
 Run with: python main.py
@@ -26,7 +26,7 @@ def main_menu(screen, clock):
     The main menu. Five buttons, one for each module.
     Returns the name of the module the user clicked.
     """
-    pygame.display.set_caption("DSA Explorer & Visualiser")
+    pygame.display.set_caption("ST2 DSA Explorer & Visualiser")
     font_big = pygame.font.SysFont("Arial", 32, bold=True)
     font     = pygame.font.SysFont("Arial", 22)
     small    = pygame.font.SysFont("Arial", 16)
@@ -51,7 +51,7 @@ def main_menu(screen, clock):
         mouse = pygame.mouse.get_pos()
 
         # title area
-        title = font_big.render("DSA Explorer & Visualiser", True, TITLE_COL)
+        title = font_big.render("ST2 DSA Explorer & Visualiser", True, TITLE_COL)
         screen.blit(title, (WIDTH // 2 - title.get_width() // 2, 60))
         sub = small.render("Explore data structures and algorithms step by step", True, GRAY)
         screen.blit(sub, (WIDTH // 2 - sub.get_width() // 2, 106))
