@@ -1,9 +1,5 @@
 """
 Phase 2: Sorting Algorithm Visualiser
-- Bubble Sort
-- Selection Sort
-- Merge Sort
-Each sort runs step by step so you can see every comparison and swap.
 """
 
 import pygame

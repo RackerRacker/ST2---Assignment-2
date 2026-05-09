@@ -1,8 +1,5 @@
 """
 Phase 2: Max-Heap Visualiser
-- Insert values and watch them bubble up
-- Extract max and watch the heap reorganise itself
-The heap is drawn as a binary tree so you can see the parent-child relationships.
 """
 
 import pygame

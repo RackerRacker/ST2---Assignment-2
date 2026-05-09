@@ -1,8 +1,5 @@
 """
 Phase 2: Graph Traversal Visualiser
-- BFS (Breadth First Search) - explores level by level
-- DFS (Depth First Search) - goes deep before backtracking
-The user can click a node to start the traversal from that node.
 """
 
 import pygame

@@ -18,6 +18,7 @@ from phase1.data_structures import data_structures_module
 from phase2.graphs import graphs_module
 from phase2.sorting import sorting_module
 from phase2.heap_module import heap_module 
+from phase3.puzzles import puzzles_module 
 
 
 
@@ -36,7 +37,8 @@ def main_menu(screen, clock):
         ("Phase 1 - Data Structures", data_structures_module, GREEN,   GREEN_HOVER),
         ("Phase 2 - Graphs", graphs_module, BLUE,   BTN_HOVER),
         ("Phase 2 - Sorting", sorting_module, BLUE, BTN_HOVER),
-        ("Phase 2 - Heap", heap_module, ORANGE,   (255, 200, 100))
+        ("Phase 2 - Heap", heap_module, ORANGE,   (255, 200, 100)),
+        ("Phase 3 - Puzzles", puzzles_module, PURPLE, (255, 190, 255))
     ]
 
     # centered button rectangles

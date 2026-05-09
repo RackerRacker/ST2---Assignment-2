@@ -1,9 +1,5 @@
 """
 Phase 1: Data Structures Playground
-- Stack with push/pop
-- Queue with enqueue/dequeue
-- Linked List with insert/delete/reverse
-- BST with insert and traversal display
 """
 
 import pygame
