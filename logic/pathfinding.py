@@ -10,7 +10,7 @@ def dijkstra_steps(grid, start, end):
     """
     Dijkstra's algorithm - finds shortest path by always expanding
     the cheapest unvisited node. Works on any weighted graph.
-    Grid: 0 = open, 1 = wall
+    Note that for the grid: 0 = open, 1 = wall
     """
     rows, cols = len(grid), len(grid[0])
     dist = {start: 0}

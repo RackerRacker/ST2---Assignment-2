@@ -5,7 +5,7 @@ Push adds to the top, pop removes from the top.
 
 class Stack:
     def __init__(self):
-        # using a list internally - the end is the "top"
+        # using a list internally - the end is the top
         self.items = []
 
     def push(self, item):

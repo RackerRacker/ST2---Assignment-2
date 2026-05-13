@@ -285,7 +285,6 @@ def _linked_list_screen(screen, clock):
                     (arrow_x + gap - 10, arrow_mid + 4)
                 ])
 
-        # "None" label at the end
         if items:
             end_x = start_x + len(items) * (node_w + gap)
             draw_text(screen, small, "-> None", (end_x - 30, y + 12), GRAY)

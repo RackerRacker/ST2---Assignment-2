@@ -1,7 +1,8 @@
 """
-Sorting algorithms as generators - each step yields the current array state
+Sorting algorithms as generators, each step yields the current array state
 plus info about which indices are being compared/swapped.
-This makes it easy to animate frame by frame in the visualiser.
+
+Notes: This makes it easy to animate frame by frame in the visualiser.
 """
 
 def bubble_sort_steps(arr):
@@ -42,7 +43,7 @@ def selection_sort_steps(arr):
 
 def merge_sort_steps(arr):
     """
-    Merge sort - divide and conquer. Split in half, sort each half, merge.
+    Merge sort - Split in half, sort each half, merge.
     Much faster than bubble/selection for large arrays.
     """
     arr = arr.copy()

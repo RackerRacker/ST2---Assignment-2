@@ -7,7 +7,6 @@ from logic.graph import Graph
 from logic.heap_logic import MaxHeap
 
 
-# helper: run a sort generator to completion and return the final array
 def _run_sort(gen):
     arr = []
     for step in gen:

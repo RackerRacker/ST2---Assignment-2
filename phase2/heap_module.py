@@ -21,7 +21,7 @@ def heap_module(screen, clock):
 
     # step-by-step animation state
     highlight_idx = -1       # which node to highlight during insert/extract
-    last_extracted = None    # remember what we just pulled out
+    last_extracted = None    # remember what was just pulled out
 
     input_box = pygame.Rect(100, 578, 100, 30)
     ins_btn   = pygame.Rect(210, 578, 80, 30)
@@ -44,7 +44,7 @@ def heap_module(screen, clock):
         # position each level, spreading nodes horizontally
         level_gap = 90
         for i in range(n):
-            level = i.bit_length() - 1   # which depth level is this node on?
+            level = i.bit_length() - 1   # which depth level is this node on
             # count how many nodes are on this level
             level_start = 2 ** level - 1
             level_end = min(2 ** (level + 1) - 2, n - 1)
@@ -107,10 +107,13 @@ def heap_module(screen, clock):
 
         for event in pygame.event.get():
             handle_quit(event)
+
             if event.type == pygame.MOUSEBUTTONDOWN:
                 input_active = input_box.collidepoint(event.pos)
+                
                 if back_rect.collidepoint(event.pos):
                     return
+                
                 if ins_btn.collidepoint(event.pos):
                     if input_text.strip().lstrip('-').isdigit():
                         val = int(input_text.strip())
@@ -120,6 +123,7 @@ def heap_module(screen, clock):
                         input_text = ""
                     else:
                         message = "Please enter a valid integer."
+
                 if ext_btn.collidepoint(event.pos):
                     val = heap.extract_max()
                     if val is not None:
@@ -128,6 +132,7 @@ def heap_module(screen, clock):
                         message = f"Extracted max: {val}. Root replaced and sifted down."
                     else:
                         message = "Heap is empty - nothing to extract!"
+
                 if clr_btn.collidepoint(event.pos):
                     heap = MaxHeap()
                     last_extracted = None

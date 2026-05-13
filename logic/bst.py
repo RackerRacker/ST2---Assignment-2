@@ -1,6 +1,5 @@
 """
 Binary Search Tree - insert nodes and do in/pre/post order traversals.
-Left children are smaller, right children are bigger.
 """
 
 class BSTNode:
@@ -33,7 +32,6 @@ class BST:
                 node.right = BSTNode(value)
             else:
                 self._insert_recursive(node.right, value)
-        # if value == node.value, we just ignore duplicates
 
     def inorder(self):
         """Left -> Root -> Right. Gives sorted order."""

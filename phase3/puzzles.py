@@ -207,11 +207,11 @@ def _event_queue_puzzle(screen, clock):
     small = pygame.font.SysFont("Arial", 15)
 
     heap = MaxHeap()
-    processed = []   # events we've already handled
+    processed = []   
     message = "Add events with a priority. Higher priority = processed first."
 
 
-    event_names = {}   # priority -> name (simple mapping for this demo)
+    event_names = {}
     event_list = []    # list of (priority, name) for display
 
     name_text = ""
@@ -219,10 +219,10 @@ def _event_queue_puzzle(screen, clock):
     name_active = pri_active = False
 
     name_box = pygame.Rect(60, 578, 140, 28)
-    pri_box  = pygame.Rect(215, 578, 60, 28)
-    add_btn  = pygame.Rect(285, 578, 80, 28)
-    proc_btn = pygame.Rect(375, 578, 140, 28)
-    clr_btn  = pygame.Rect(525, 578, 70, 28)
+    pri_box  = pygame.Rect(235, 578, 60, 28)
+    add_btn  = pygame.Rect(305, 578, 80, 28)
+    proc_btn = pygame.Rect(395, 578, 140, 28)
+    clr_btn  = pygame.Rect(545, 578, 70, 28)
 
     while True:
         screen.fill(BG)

@@ -5,7 +5,6 @@ import unittest
 from logic.pathfinding import dijkstra_steps, astar_steps, dp_grid_paths
 
 
-# helper: run a pathfinding generator and return (visited_set, path)
 def _run_pathfinding(gen):
     last_visited = set()
     last_path = None
@@ -78,7 +77,7 @@ class TestAStar(unittest.TestCase):
         grid = self._open_grid(5, 5)
         _, path_dijk = _run_pathfinding(dijkstra_steps(grid, (0, 0), (4, 4)))
         _, path_astar = _run_pathfinding(astar_steps(grid, (0, 0), (4, 4)))
-        # both should find a path of the same length
+        # both should find a path of the same length for fair comparison
         self.assertEqual(len(path_dijk), len(path_astar))
 
     def test_no_path_when_blocked(self):
@@ -125,7 +124,7 @@ class TestDPGridPaths(unittest.TestCase):
     def test_all_walls_except_edges_still_finds_path(self):
         """A path along just the edges should still be counted."""
         grid = [[1] * 4 for _ in range(4)]
-        # clear top row and right column - one path around the edge
+        # clear top row and right column, one path around the edge
         for c in range(4):
             grid[0][c] = 0
         for r in range(4):
