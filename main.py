@@ -9,7 +9,6 @@ Requires: pygame  (pip install pygame)
 import pygame
 import sys
 
-# make sure we can import utils and modules from here
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 
@@ -74,7 +73,6 @@ def main_menu(screen, clock):
             if event.type == pygame.MOUSEBUTTONDOWN:
                 for i, (_, func, _, _) in enumerate(entries):
                     if rects[i].collidepoint(event.pos):
-                        # launch the module - it runs its own loop and returns here when done
                         func(screen, clock)
 
         clock.tick(FPS)

@@ -379,7 +379,7 @@ def _dp_grid_puzzle(screen, clock):
                 elif is_end:
                     color = RED
                 elif grid[r][c] == 1:
-                    color = DARK_GRAY
+                    color = ORANGE
                 else:
                     color = SURFACE
 
